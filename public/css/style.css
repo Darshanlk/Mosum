@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:wght@900&display=swap');
+
+
+*{
+margin: 0%;
+padding: 0%;
+box-sizing: border-box;
+font-family: 'Piazzolla', serif;
+}
+
+
+
+:root{
+    --main-bg :#1e272e;
+    --main-color :#0097e6;
+}
+
+html{
+    font-size: 62.5%; /* must it for responsive   1rem=10px*/
+}
+
+
+.main_menu{
+    background-color: var(--main-bg);
+
+}
+
+.navbar{
+    color: #fff;
+    padding: 2rem 0;
+
+}
+
+.navbar a{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar-toggler{
+    background-color: gray;
+}
+
+.navbar li {
+    margin:0 2rem;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.fa-snowflake{
+    transition: all;
+    animation: rot  2s  linear  infinite ;
+    color: var(--main-color);
+    margin: 0 0.5rem;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+/* main header */
+.main_header_left{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.main_header_left  p{
+    font-size: 2rem;
+
+}
+
+.main_header_left  h1{
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0 ;
+    text-transform: capitalize;
+    
+}
+
+.main_header_left .text_color{
+
+    color: var(--main-color);
+}
+
+.main_header_left button{
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #1e272e;
+    outline: none;
+
+
+}
+
+.main_header_left button:hover{
+    box-shadow: 0 8px 6px -6px var(--main-color);
+    transform: translateY(-0.7rem);
+    transition: all 0.3s ease 0s;
+}
+
+
+.main_header_right{
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main_header_right figure img{
+
+filter: drop-shadow(0 0.5rem 1rem  rgba(0,0,0,0.3));
+
+}
+
+
+/* footer */
+.footer{
+    position: fixed;
+    bottom: 0%;
+    background-color: var(--main-bg);
+    width: 100%;
+
+ 
+}
+
+.footer p{
+    margin: 0%;
+    text-align: center;
+
+    color: #fff;
+    line-height: 5rem;
+    font-size: 1.4rem;
+}
+/* responsive code */
+
+@media(max-width:768px)
+{
+    .main_header_left{
+        height: auto;
+        margin: 5rem 0;
+
+    }
+
+    .main_header_right{
+        height: auto;
+        margin-top: 3rem;
+        
+    }
+}

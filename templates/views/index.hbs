@@ -5,8 +5,20 @@
     <title>Document</title>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="shortcut icon" href="images/icon.png" type="image/png" />
+      {{!-- <script src="js/home.js"></script> --}}
   </head>
-  <body>
+  <body id="body">
+
+    <script>
+          const synth = window.speechSynthesis;
+          const speech = new SpeechSynthesisUtterance();
+          const allVoices = speechSynthesis.getVoices();
+          speech.voice = allVoices[30];
+          speech.text = `Hello {{username}}`
+          speech.volume=1
+          window.speechSynthesis.speak(speech)
+        
+    </script>
     
     {{>navbar}}
     <!-- main header -->
@@ -15,7 +27,8 @@
         <div class="col-md-10 col-12 mx-auto">
           <div class="row">
             <div class="col-md-6 col-12 main_header_left">
-              <p>Welcome to weather app</p>
+              <p id="pid">Welcome to weather app  <label id="xlabel"> {{username}} </label></p>
+              
               <h1>Get The latest information about <span class="text_color">Weather</span>  about your city</h1>
              <a href="/weather" class=""><button>cheak now</button></a>
             </div>
@@ -25,9 +38,6 @@
                     <div class="carousel-inner">
                       <div class="carousel-item active">
                         <img class=" w-100" src="images/weather1.jpg" alt="First slide">
-                      </div>
-                      <div class="carousel-item">
-                        <img class=" w-100" src="images/weather2.jpg" alt="Second slide">
                       </div>
                       <div class="carousel-item">
                         <img class=" w-100" src="images/news1.jpg" alt="Third slide">
